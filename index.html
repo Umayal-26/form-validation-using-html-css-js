@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <center>
+        <h1>Validation form</h1>
+        <div class="form">
+           <table>
+              <tr>
+          <td> <form name="validateform" action="message.html" method="post" onsubmit="return validationform()" class="row justify-content-center"></td></tr>
+           <tr>
+              <td><label>Username:</label></td>
+              <td><input type="text" name="firstname" placeholder="Enter your first name:"><br><br></td><tr></tr>
+              <tr>
+              <td><label>Lastname:</label></td>
+              <td><input type="text" name="lastname" placeholder="Enter your last name:"><br><br></td></tr>
+              <tr>
+              <td><label>City:</label></td>
+              <td><input type="text" name="city" placeholder="Enter your city:"><br><br></td></tr>
+              <tr>
+              <td><label>Ph Number:</label></td>
+              <td><input type="number" name="number" placeholder="Enter your number:"><br><br></td></tr>
+              <tr>
+              <td><label>Address:</label></td>
+              <td><textarea name="address" placeholder="Enter your Address:"></textarea><br><br></td></tr>
+              <tr><td></td><td><button type="submit" value="submit">Submit</button></td></tr>
+           </form>
+        </table>
+        </div>
+    
+           <script>
+              function validationform(){
+                 var firstname=document.validateform.firstname.value;
+                 var lastname=document.validateform.lastname.value;
+                 var city=document.validateform.city.value;
+                 var number=document.validateform.number.value;
+                 var address=document.validateform.address.value;
+                 if(firstname==null || firstname=="")
+                 {
+                 alert("First Name should not be empty")
+                 return false;
+                 }
+                 if(lastname==null || lastname=="")
+                 {
+                 alert("Last Name should not be empty")
+                 return false;
+                 }
+                 else if(city==null || city=="")
+                 {
+                  alert("city should not be empty")
+                  return false;
+                 }
+                 else if(number.length==10)
+                 {
+                  alert("Number should be a valid one")
+                  return false;
+                 }
+                 else if(address==null || address=="")
+                 {
+                  alert("Address should not be empty")
+                  return false;
+                 }
+                 else{
+                    alert("Form Submitted Succesfully")
+                    return true;
+                 }
+              }
+           </script>
+        
+   
+       
+  </body>
+  </html>
+</body>
+</html>
